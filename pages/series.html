@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- Icon library -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- Page title -->
+        <title>Magima - Series</title>
+        <!-- Description -->
+        <meta name="description" content="Busca tu serie favorita en nuestro amplio catálogo de anime.">
+        <!-- Keywords -->
+        <meta name="keywords" content="anime, series, tv, animación, catálogo, búsqueda, magima">
+        <!-- Copyright -->
+        <meta name="copyright" content="MAGIMA">
+        <!-- Author -->
+        <meta name="author" content="Alan Maximiliano Vazquez, vazquezalanmaximiliano@gmail.com">
+    </head>
+    <body>
+<!---------------------- Sidebar Menú ------------------------>
+        <div class="sidebar close">
+          <div class="logo-details">
+            <i><img src="../img/LogoIcon.png" alt="Logo"></i>
+            <span class="logo_name">Magima</span>
+          </div>
+          <ul class="nav-links">
+            <!-- Inicio -->
+            <li>
+              <a href="./home.html">
+                <i class='bx bx-home-alt-2'></i>
+                <span class="link_name">Inicio</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="./home.html">Inicio</a></li>
+              </ul>
+            </li>
+            <!-- Género -->
+            <li>
+              <div class="iocn-link">
+                <a href="#">
+                  <i class='bx bx-directions'></i>
+                  <span class="link_name">Géneros</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow' ></i>
+              </div>
+              <ul class="sub-menu">
+                <li><a class="link_name" href="#">Géneros</a></li>
+                <li><a href="#">Acción</a></li>
+                <li><a href="#">Aventura</a></li>
+                <li><a href="#">Bélico</a></li>
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Comedia</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Erotismo</a></li>
+                <li><a href="#">Fantasía</a></li>
+                <li><a href="#">Gore</a></li>
+                <li><a href="#">Musical</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Suspenso</a></li>
+                <li><a href="#">Thriller</a></li>
+                <li><a href="#">Terror</a></li>
+                <li><a href="#">Western</a></li>
+              </ul>
+            </li>
+            <!-- Explorar -->
+            <li>
+              <a href="#">
+                <i class='bx bx-compass' ></i>
+                <span class="link_name">Explorar</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Explorar</a></li>
+              </ul>
+            </li>
+            <!-- Series -->
+            <li class="active-link">
+                <a href="./series.html">
+                  <i class='bx bx-tv'></i>
+                  <span class="link_name">Series</span>
+                </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name active-link" href="./series.html">Series</a></li>
+              </ul>
+            </li>
+            <!-- Peliculas -->
+            <li>
+                <a href="./peliculas.html">
+                  <i class='bx bx-camera-movie'></i>
+                  <span class="link_name">Peliculas</span>
+                </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="./peliculas.html">Peliculas</a></li>
+              </ul>
+            </li>
+            <!-- OVAs -->
+            <li>
+              <a href="#">
+                <i class='bx bx-movie-play'></i>
+                <span class="link_name">OVAs</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">OVAs</a></li>
+              </ul>
+            </li>
+            <!-- Mi Lista -->
+            <li>
+              <a href="#">
+                <i class='bx bx-list-ul'></i>
+                <span class="link_name">Mi Lista</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Mi Lista</a></li>
+              </ul>
+            </li>
+            <!-- Historial -->
+            <li>
+              <a href="#">
+                <i class='bx bx-history'></i>
+                <span class="link_name">Historial</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Historial</a></li>
+              </ul>
+            </li>
+            <!-- Configuración -->
+            <li>
+              <a href="#">
+                <i class='bx bx-cog' ></i>
+                <span class="link_name">Configuración</span>
+              </a>
+              <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Configuración</a></li>
+              </ul>
+            </li>
+            <!-- Perfil -->
+            <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="../img/profiles/user1.jpg" alt="profileImg">
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Perfil</div>
+              <div class="job">Admin</div>
+            </div>
+            <i class='bx bx-log-out' ></i>
+          </div>
+        </li>
+          </ul>
+        </div>
+<!---------------------- Contenido Principal ------------------------>
+        <div id="home">
+
+            <header>
+                <div class="nav">
+                    <i class='bx bx-menu' ></i>
+                    <div class="search-box">
+                        <button class="btn-search"><i class="bx bx-search"></i></button>
+                        <input type="text" class="input-search" placeholder="Type to Search...">
+                    </div>
+                </div>
+            </header>
+            
+            <main class="main-series-peliculas">
+<!---------------------- Cuerpo Principal con Carousel de imagenes ------------------------>
+<!---------------------- Carousel 1 ------------------------>
+            <h1>En Emisión</h1>
+                <div class="carousel">
+                    <div class="slick-list" id="slick-list">
+                        <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                        </button>
+                        <div class="slick-track" id="track">
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Ao Ashi</h4>
+                                        <picture>
+                                            <img src="../img/series/ao-ashi/pin.jpg" alt="ao ashi">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Birdie Wing Golf Girls' Story</h4>
+                                        <picture>
+                                            <img src="../img/series/birdie-wing-golf-girls-story/pin.jpg" alt="Birdie Wing Golf Girls' Story">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Boruto</h4>
+                                        <picture>
+                                            <img src="../img/series/boruto-naruto-next-generations/pin.jpg" alt="boruto">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Build Divide: Code White</h4>
+                                        <picture>
+                                            <img src="../img/series/build-divide/pin2.jpg" alt="Build Divide: Code White">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Detective Conan</h4>
+                                        <picture>
+                                            <img src="../img/series/detective-conan/pin.jpg" alt="detective conan">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Digimon Ghost Game</h4>
+                                        <picture>
+                                            <img src="../img/series/digimon-ghost-game/pin.jpg" alt="digimon ghost game">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Dragon Quest: Dai no Daibouken</h4>
+                                        <picture>
+                                            <img src="../img/series/dragon-quest-dai-no-daibouken/pin.jpg" alt="Dragon Quest Dai no Daibouken">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Kaginado<small>Temporada 2</small></h4>
+                                        <picture>
+                                            <img src="../img/series/kaginado/pin.jpg" alt="Kaginado">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Kakkou no Linazuke</h4>
+                                        <picture>
+                                            <img src="../img/series/kakkou-no-linazuke/pin.jpg" alt="kakkou no linazuke">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Kawaii dake ja nai Shikimori-san</h4>
+                                        <picture>
+                                            <img src="../img/series/kawaii-dake-ja-nai-shikimori-san/pin.jpg" alt="Kawaii dake ja nai Shikimori-san">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Kingdom<small>Temporada 4</small></h4>
+                                        <picture>
+                                            <img src="../img/series/kingdom/pin.jpg" alt="Kingdom">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Kunoichi Tsubaki no Mune no Uchi</h4>
+                                        <picture>
+                                            <img src="../img/series/kunoichi-tsubaki-no-mune-no-uchi/pin.jpg" alt="Kunoichi Tsubaki no Mune no Uchi">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Love All Play</h4>
+                                        <picture>
+                                            <img src="../img/series/love-all-play/pin.jpg" alt="love all play">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Machikado Mazoku<small>Temporada 2</small></h4>
+                                        <picture>
+                                            <img src="../img/series/machikado-mazoku/pin2.jpg" alt="Machikado Mazoku">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Mahoutsukai Reimeiki</h4>
+                                        <picture>
+                                            <img src="../img/series/mahoutsukai-reimeiki/pin.jpg" alt="Mahoutsukai Reimeiki">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>One Piece</h4>
+                                        <picture>
+                                            <img src="../img/series/one-piece/pin.jpg" alt="one piece">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Pokemon <small>Temporada 23</small></h4>
+                                        <picture>
+                                            <img src="../img/series/pokemon/pin23.jpg" alt="pokemon">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Shadowverse Flame</h4>
+                                        <picture>
+                                            <img src="../img/series/shadowverse-flame/pin.jpg" alt="Shadowverse Flame">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>SpyXFamily</h4>
+                                        <picture>
+                                            <img src="../img/series/spyxfamily/pin.jpg" alt="SpyXFamily">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slick">
+                                <div>
+                                    <a href="#">
+                                        <h4>Tate no Yuusha no Nariagari<small>Temporada 2</small></h4>
+                                        <picture>
+                                            <img src="../img/series/tate-no-yuusha-no-nariagari/pin2.jpg" alt="Tate no Yuusha no Nariagari">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+<!---------------------- Carousel 2 ------------------------>     
+            <h2>Últimos Capítulos Agregados</h2>           
+            <div class="carousel">
+                <div class="slick-list" id="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-track" id="track">
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Boruto <small>Capítulo 228</small></h4>
+                                    <picture>
+                                        <img src="../img/series/boruto-naruto-next-generations/pin.jpg" alt="boruto">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Detective Conan <small>Capítulo 1045</small></h4>
+                                    <picture>
+                                        <img src="../img/series/detective-conan/pin.jpg" alt="detective conan">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Dragon Quest: Dai no Daibouken <small>Capítulo 24</small></h4>
+                                    <picture>
+                                        <img src="../img/series/dragon-quest-dai-no-daibouken/pin.jpg" alt="Dragon Quest Dai no Daibouken">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Kaginado<small>Temporada 2</small><small>Capítulo 12</small></h4>
+                                    <picture>
+                                        <img src="../img/series/kaginado/pin.jpg" alt="Kaginado">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Kawaii dake ja nai Shikimori-san <small>Capítulo 22</small></h4>
+                                    <picture>
+                                        <img src="../img/series/kawaii-dake-ja-nai-shikimori-san/pin.jpg" alt="Kawaii dake ja nai Shikimori-san">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Kingdom<small>Temporada 4</small><small>Capítulo 11</small></h4>
+                                    <picture>
+                                        <img src="../img/series/kingdom/pin.jpg" alt="Kingdom">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Kunoichi Tsubaki no Mune no Uchi <small>Capítulo 18</small></h4>
+                                    <picture>
+                                        <img src="../img/series/kunoichi-tsubaki-no-mune-no-uchi/pin.jpg" alt="Kunoichi Tsubaki no Mune no Uchi">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Love All Play <small>Capítulo 02</small></h4>
+                                    <picture>
+                                        <img src="../img/series/love-all-play/pin.jpg" alt="love all play">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Machikado Mazoku<small>Temporada 2</small><small>Capítulo 12</small></h4>
+                                    <picture>
+                                        <img src="../img/series/machikado-mazoku/pin2.jpg" alt="Machikado Mazoku">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>One Piece <small>Capítulo 1024</small></h4>
+                                    <picture>
+                                        <img src="../img/series/one-piece/pin.jpg" alt="one piece">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Pokemon <small>Temporada 23</small><small>Capítulo 48</small></h4>
+                                    <picture>
+                                        <img src="../img/series/pokemon/pin23.jpg" alt="pokemon">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Shadowverse Flame <small>Capítulo 12</small></h4>
+                                    <picture>
+                                        <img src="../img/series/shadowverse-flame/pin.jpg" alt="Shadowverse Flame">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>SpyXFamily <small>Capítulo 10</small></h4>
+                                    <picture>
+                                        <img src="../img/series/spyxfamily/pin.jpg" alt="SpyXFamily">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+
+            </div>
+                <!---------------------- Carousel 3 ------------------------>     
+            <h3>Recomendado para tí</h3>           
+            <div class="carousel">
+                <div class="slick-list" id="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                    <div class="slick-track" id="track">
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Baraou no Souretsu</h4>
+                                    <picture>
+                                        <img src="../img/series/baraou-no-souretsu/pin.jpg" alt="Baraou no Souretsu">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Visual Prison</h4>
+                                    <picture>
+                                        <img src="../img/series/visual-prison/pin.jpg" alt="Visual Prison">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Night Head 2041</h4>
+                                    <picture>
+                                        <img src="../img/series/night-head-2041/pin.jpg" alt="Night Head 2041">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Shadows House</h4>
+                                    <picture>
+                                        <img src="../img/series/shadows-house/pin.jpg" alt="Shadows House">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Mars Red</h4>
+                                    <picture>
+                                        <img src="../img/series/mars-red/pin.jpg" alt="Mars Red">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Munou na Nana</h4>
+                                    <picture>
+                                        <img src="../img/series/munou-na-nana/pin.png" alt="Munou na Nana">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Gleipnir</h4>
+                                    <picture>
+                                        <img src="../img/series/gleipnir/pin.jpg" alt="Gleipnir">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <a href="#">
+                                    <h4>Kyokou Suiri</h4>
+                                    <picture>
+                                        <img src="../img/series/kyokou-suiri/pin.jpg" alt="Kyokou Suiri">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+
+            </div>
+            </main>
+
+        </div>
+        
+    <script defer src="../js/script-sidebar.js"></script>
+    <script defer src="../js/script-carousel.js"></script>
+    
+</body>
+</html>

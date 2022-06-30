@@ -1,0 +1,199 @@
+@import "components/sidebar";
+
+section{
+    padding: 16px 16px;
+}
+
+#home{
+    position: relative;
+    background-color:$bg-color;
+    height: 100vh;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+    z-index: 0;
+    @include flex(column,center,center);
+    overflow: hidden;
+    header{
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8vh;
+        transition: 0.5s ease;
+        .nav{
+            width: 100%;
+            height: 100%;
+            background-color: $bar-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .bx-menu{
+                color: $text-color;
+                font-size: 24px;
+                margin: 0 15px;
+                cursor: pointer;
+                &:hover{
+                    color: $accent-color;
+                }
+            }
+            @import "components/searchbar";
+        }
+    }
+    .home{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        @include flex(column, center, center);
+        background-color: $bg-color;
+        &:before{
+            z-index: 777;
+            content: '';
+            position: absolute;
+            background: $bar-color;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .content{
+            z-index: 888;
+            color: #fff;
+            width: 60%;
+            display: none;
+            &.active{
+                display: block;
+                @include flex(column, center, center);
+            }
+            img{
+                width: 30vw;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 0.8rem;
+                margin-bottom: 30px;
+                line-height: 18px;
+                text-align: justify;
+            }
+            a{
+                @extend %boton;
+            }
+        }
+        }
+        video{
+            z-index: 000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }    
+    .slider-navigation{
+        z-index: 888;
+        position: absolute;
+        bottom: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(80px);
+        .nav-btn{
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+            transition: 0.3s ease;
+            &.active{
+                background: $accent-color;
+            }
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .video-slide{
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+        &.active{
+            clip-path: circle(150% at 0 50%);
+            transition: 2s ease;
+            transition-property: clip-path;
+        }
+    }
+}
+
+
+.sidebar.close ~ #home{
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+@media (max-width: 560px){
+    #home{
+        .home{
+            .content{
+                width: 100%;
+                img{
+                    width: 50vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar.close .nav-links li .sub-menu{
+        display: none;
+    }
+    .sidebar{
+        width: 78px;
+    }
+    .sidebar .profile-details{
+        width: 78px;
+    }
+    .sidebar.close{
+        width: 0;
+    }
+    .sidebar.close .profile-details{
+        width: 0px;
+        img{
+            display: none;
+        }
+    }
+    #home{
+        left: 78px;
+        width: calc(100% - 78px);
+        z-index: 100;
+        header{
+            .nav{
+                .bx-menu{
+                    font-size: 32px;
+                    }
+            }
+        }
+        }
+    .sidebar.close ~ #home{
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #home{
+        .home{
+            .content{
+                width: 100%;
+                p{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

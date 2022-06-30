@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Page title -->
+    <title>Magima</title>
+    <!-- Description -->
+    <meta name="description" content="En Magima encontrarás un amplio catálogo de anime para disfrutar donde quieras que estés.">
+    <!-- Keywords -->
+    <meta name="keywords" content="anime, series, peliculas, tv, cine, animación">
+    <!-- Copyright -->
+    <meta name="copyright" content="MAGIMA">
+    <!-- Author -->
+    <meta name="author" content="Alan Maximiliano Vazquez, vazquezalanmaximiliano@gmail.com">
+</head>
+
+<body>
+<!-------- Body dentro de un div para el video de fondo -------->
+    <div id="bg">
+
+        <video autoplay loop plays-inline muted id="bg-video" poster="./img/index/background1.jpg">
+                <source src="./img/index/video.mp4" type="video/mp4">
+        </video> 
+        
+        <header>
+            <a class="logo" href="./index.html"><img src="./img/Logo.png" alt="Magima Logo"></a> 
+        </header>
+        
+        <main>
+<!---------------------- Texto ------------------------>
+            <div class="texto-inicio">
+                <h1>Anime sin límites</h1>
+                <h2>Donde quieras y cuando quieras</h2>
+                <h3>¿Quieres ser parte de Magima?</h3>
+            </div>
+<!---------------------- Formulario General ------------------------>
+            <div class="formulario">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'Iniciar')" id="defaultOpen">Iniciar Sesión</button>
+                    <button class="tablinks" onclick="openCity(event, 'Registro')">Registro</button>
+                </div>
+<!---------------------- Form Iniciar Sesión ------------------------>
+                <div id="Iniciar" class="tabcontent">
+                    <form class="form-ingresar">
+                        <fieldset>
+                            <div class="ingresa-email">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="ingresa-password" >
+                                <input type="password" name="contraseña" placeholder="Contraseña">
+                            </div>
+                        </fieldset>
+                        <div class="text-log"><input type="checkbox" name="recordar">
+                        <h3>Recordarme</h3>
+                        <a href="#">Olvidé mi contraseña</a>
+                        </div>
+                        <div class="botones">
+                            <a class="boton-registro" href="./pages/profiles.html">Ingresar</a>
+                        </div>
+                    </form>
+                </div>
+<!---------------------- Form Registro ------------------------>
+                <div id="Registro" class="tabcontent">
+                    <form class="form-ingresar">
+                        <fieldset>
+                            <div class="ingresa-usuario">
+                                <label for="usuario"></label>
+                                <input type="text" name="usuario" placeholder="Nombre de usuario"></div>
+                            <div class="ingresa-email">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="ingresa-password" >
+                                <input type="password" name="contraseña" placeholder="Contraseña">
+                            </div>
+                        </fieldset>
+                        <div class="text-log"><input type="checkbox" name="recordar">
+                        <h3>Acepto los términos y condiciones</h3>
+                        <a href="#">Olvidé mi contraseña</a>
+                        </div>
+                        <div class="botones">
+                            <a class="boton-registro" href="./pages/profiles.html">Registrarme</a>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+<!---------------------- Imagenes laterales de chica ------------------------>
+            <img src="./img/index/girlpink.png" alt="" class="img-ingresar">
+            <img src="./img/index/girlpink.png" alt="" class="img-ingresar2">
+        </main>
+        
+        <footer>
+            <ul>
+                <li class="footer-link"><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li>Creado por Alan M. Vazquez</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <script src="./js/script-index.js"></script>
+
+</body>
+
+</html>

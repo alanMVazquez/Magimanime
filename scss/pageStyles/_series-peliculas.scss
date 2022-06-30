@@ -1,0 +1,19 @@
+#home{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include flex(column, unset,unset);
+    .main-series-peliculas{
+        position: relative;
+        width: 100%;
+        flex: 1;
+        top: 8vh;
+        @import "../pageStyles/components/carousel";
+        h1, h2, h3{
+        margin: 16px 16px;
+        color: white;
+        font-size: 28px;
+        text-transform: uppercase;
+        }
+    }
+}
+

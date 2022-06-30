@@ -1,0 +1,36 @@
+// Import Font
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Yeon+Sung&display=swap');
+
+/*Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+// Imports utilities
+
+@import "utilities/variables";
+@import "utilities/keyframes";
+@import "utilities/extends";
+@import "utilities/mixins";
+
+html body{
+    height: 100vh;
+    a{
+        text-decoration: none;
+    }
+}
+
+// Import Pages Styles
+@import "pageStyles/index";
+@import "pageStyles/profiles";
+@import "pageStyles/home";
+@import "pageStyles/series-peliculas";
+@import "pageStyles/main-series";
+
+// Import MediaQueries
+@import "utilities/media";
